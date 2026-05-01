@@ -1,5 +1,5 @@
 <div class="breadcrumbs">
-  @for (item of breadcrumbsService.breadcrumbsContent(); track item) {
+  @for (item of breadcrumbsService.breadcrumbsContent(); track item.name) {
     <span> > </span>
     @if (item.href) {
       <a class="parent-page-link" [routerLink]="item.href">{{ item.name }}</a>
