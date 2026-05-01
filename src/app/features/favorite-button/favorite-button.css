@@ -1,0 +1,9 @@
+.favorite-button {
+  color: yellow;
+  background: gray;
+  border: 0px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.25rem;
+  padding: 0.5rem;
+}

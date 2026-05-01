@@ -1,6 +1,31 @@
 # FilmCollection
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.8.
+A modern Angular application for browsing and managing a personal film collection. Built with Angular 21, signals, and standalone components.
+
+## Features
+- **Browse Films**: View a curated list of films with posters, ratings, and genres
+- **Search**: Filter films by title in real-time
+- **Favorites**: Mark and unmark films as favorites
+- **Film Details**: View comprehensive film information including description, duration, genre, and year
+- **Responsive Navigation**: Client-side routing with dynamic breadcrumbs
+- **Custom UI Elements**: Auto-focus search field and formatted duration display (e.g., "2h 30min")
+
+## Technologies Used
+- **Angular 21** - Framework with standalone components and signals
+- **TypeScript** - Strict mode enabled
+- **ESLint** - Code linting with Angular ESLint integration
+
+## Prerequisites
+NodeJs
+Angular CLI
+
+## Installing dependencies
+
+To install dependencies run:
+
+```bash
+npm install
+```
 
 ## Development server
 
@@ -12,48 +37,24 @@ ng serve
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+## Project Structure
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+src/app/features/
+├── film-card/          # Reusable film card component
+├── film-page/          # Film details page
+├── films/              # Film data, types, and service
+├── home-page/          # Main film listing with search
+├── header/             # App header with navigation
+├── footer/             # App footer
+├── breadcrumbs/        # Dynamic breadcrumb navigation
+├── favorite-button/    # Favorite toggle button
+└── utils/              # Custom directives and pipes
+    ├── custom-auto-focus.ts
+    └── minute-formatter-pipe.ts
 
-```bash
-ng generate component component-name
-```
+## Architecture Highlights
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Signals: Film data stored in signal() with computed filtering via computed()
+- Standalone Components: All components, directives, and pipes are standalone
+- Global Service: Services registered with providedIn: 'root'
+- Component Input Binding: Route parameters bound directly to component inputs via withComponentInputBinding()

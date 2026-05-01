@@ -1,0 +1,16 @@
+<div class="film-card">
+  <app-favorite-button
+    [isFavorite]="film().isFavorite"
+    class="film-card-favorite-button"
+    (toggleFavorite)="onToggleFavorite()"
+  />
+  <a class="film-card-content" [routerLink]="getFilmRouteLink()">
+    <p class="film-card-title">{{ film().title }} ({{ film().year }})</p>
+    <img class="film-card-image" [src]="film().posterUrl" [alt]="film().title" />
+    @if (!isMinimal()) {
+      <p>Genre: {{ film().genre }}</p>
+      <p>Rating: {{ film().rating }}</p>
+      <p>Duration: {{ film().duration | minuteFormatter }}</p>
+    }
+  </a>
+</div>

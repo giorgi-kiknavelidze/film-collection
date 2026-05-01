@@ -1,0 +1,33 @@
+.film-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.film-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.back-button {
+  display: block;
+  cursor: pointer;
+  border-style: solid;
+  border-color: white;
+  color: white;
+  background-color: gray;
+  border-radius: 1rem;
+  max-width: fit-content;
+  padding: 0.75rem 0.5rem 0.75rem 0.5rem;
+  text-decoration: none;
+}
+
+@media (min-width: 48rem) {
+  .film-info {
+    flex-direction: row;
+  }
+}

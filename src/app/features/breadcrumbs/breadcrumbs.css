@@ -1,0 +1,14 @@
+.breadcrumbs {
+  display: flex;
+  gap: 0.125rem;
+}
+
+.current-page-name {
+  font-weight: bold;
+  display: flex;
+}
+
+.parent-page-link {
+  color: inherit;
+  text-decoration: underline;
+}

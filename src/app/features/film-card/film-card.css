@@ -1,0 +1,32 @@
+.film-card-content {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  cursor: pointer;
+}
+
+.film-card-title {
+  text-align: center;
+}
+
+.film-card-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.film-card-favorite-button {
+  width: 100%;
+}

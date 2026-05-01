@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  gap: 0.5rem;
+}
+
+.header-main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.navigation {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.navigation-link {
+  text-decoration: underline;
+  color: inherit;
+  font-size: 1.25rem;
+}
+
+@media (min-width: 48rem) {
+  .header-main-content {
+    flex-direction: row;
+  }
+}

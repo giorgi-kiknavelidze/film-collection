@@ -1,0 +1,10 @@
+<div class="breadcrumbs">
+  @for (item of breadcrumbsService.breadcrumbsContent(); track item) {
+    <span> > </span>
+    @if (item.href) {
+      <a class="parent-page-link" [routerLink]="item.href">{{ item.name }}</a>
+    } @else {
+      <span class="current-page-name">{{ item.name }}</span>
+    }
+  }
+</div>

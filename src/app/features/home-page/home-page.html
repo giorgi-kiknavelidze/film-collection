@@ -1,0 +1,19 @@
+<main class="home-page-content">
+  <input
+    #searchBox
+    appCustomAutoFocus
+    class="searchbox"
+    placeholder="Search a movie"
+    type="text"
+    (input)="onSearchBoxInput(searchBox.value)"
+  />
+  @if (filmsToDisplay().length > 0) {
+    <div class="film-cards">
+      @for (film of filmsToDisplay(); track film.id) {
+        <app-film-card [film]="film"></app-film-card>
+      }
+    </div>
+  } @else {
+    <p class="no-films-found">No films found</p>
+  }
+</main>

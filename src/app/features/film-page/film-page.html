@@ -1,0 +1,16 @@
+<main class="film-page">
+  <a class="back-button" [routerLink]="`/${paths.home}`"
+    ><i class="bi bi-arrow-left"></i> Go Back</a
+  >
+  <div class="film-info">
+    <app-film-card [film]="film()" [isMinimal]="true"></app-film-card>
+    <div>
+      <p>Title: {{ film().title }}</p>
+      <p>Year: {{ film().year }}</p>
+      <p>Genre: {{ film().genre }}</p>
+      <p>{{ film().duration | minuteFormatter }}</p>
+      <p>Description:</p>
+      <p>{{ film().description }}</p>
+    </div>
+  </div>
+</main>
