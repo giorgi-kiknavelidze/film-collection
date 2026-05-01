@@ -9,7 +9,6 @@
 .film-info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 2rem;
 }
 
@@ -24,10 +23,4 @@
   max-width: fit-content;
   padding: 0.75rem 0.5rem 0.75rem 0.5rem;
   text-decoration: none;
-}
-
-@media (min-width: 48rem) {
-  .film-info {
-    flex-direction: row;
-  }
 }
