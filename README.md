@@ -38,7 +38,7 @@ ng serve
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
 ## Project Structure
-
+```
 src/app/features/
 ├── film-card/          # Reusable film card component
 ├── film-page/          # Film details page
@@ -51,6 +51,7 @@ src/app/features/
 └── utils/              # Custom directives and pipes
     ├── custom-auto-focus.ts
     └── minute-formatter-pipe.ts
+```
 
 ## Architecture Highlights
 
